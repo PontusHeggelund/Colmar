@@ -6,16 +6,36 @@ html {
   box-sizing: inherit;
 }
 
+/* Change of base font-size depending on screen size */
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 8px;
+  }
+}
+
 body {
   font-size: 16px;
   line-height: 1.4;
-  background-color: white;
+  background-color: #FFFFFF;
   font-family: 'Titillium Web', sans-serif;
+  color: #3B3B3B;
 }
 
 * h2 {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 * h3 {
@@ -41,6 +61,61 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 0.95;
+}
+
+/*Mobile screen*/
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+
+  .top-menu .web_menu {
+    display: none;
+  }
+
+  .top-menu .mobile_menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    transform: scale(1.2);
+  }
+
+  .top-menu .logo {
+    display: none
+  }
+
+  .container .frame-box {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+  }
+
+  .container .picture-box {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .container .headline-box {
+    width: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .container .headline-box h1 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .container .start-button {
+    width: 90%;
+    margin-bottom: 32px;
+  }
+
+  .left-pic-text-column {
+    display: none;
+  }
 }
 
 .logo {
@@ -53,14 +128,23 @@ header {
 }
 
 .logo span {
-  font-weight: bold;
-  color: black; /*ändra till rätt färg sen*/
+  font-weight: 900;
   font-size: 2rem;
+}
+
+.mobile_menu {
+  display: none;
 }
 
 #academy {
   font-weight: normal;
-  color: grey; /*ändra till rätt färg sen*/
+  color: #ADADAD; /*light grey*/
+}
+
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .top-menu ul {
@@ -74,14 +158,24 @@ header {
 }
 
 .top-menu a {
-  font-size: 1.5rem;
-  color: black; /*ändra till rätt färg sen*/
+  font-size: 1.3rem;
+  color: #3B3B3B;
   text-decoration: none;
+  padding: 2px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out 5ms;
+  }
+
+.top-menu a:hover {
+  background-color: #3B3B3B;
+  border-radius: 5px;
+  padding: 2px;
+  color: #F8F8FF;
 }
 
 /* The first section, Learn something new everyday */
 .container .section-box:nth-child(2n+1) {
-  background-color: lightgrey;
+  background-color: #D4D4D4;
 }
 
 .frame-box {
@@ -109,7 +203,7 @@ header {
   justify-content: center;
   width: 40%;
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 900;
   margin-right: 4rem;
 }
 
@@ -119,12 +213,42 @@ header {
 }
 
 .start-button {
-  background-color: darkgrey;
+  background-color: #666666;
+  display: inline-block;
   padding: 8px 0;
   width: 100%;
   text-align: center;
   margin-top: 1.5rem;
+  color: #F8F8FF;
+  font-weight: 200;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
+
+/* This does not work correctly so not inluded. Should generate a shadow to the box */
+
+/* .start-button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+} */
+
+.start-button:hover {
+  transform: scale(1.05, 1.05);
+  background-color: #3B3B3B;
+}
+
+/* .start-button:hover::after {
+  opacity: 1;
+} */
 
 /*The second section of the page */
 .left-pic-text-column {
@@ -145,6 +269,7 @@ header {
 
 #quoter-name {
   font-family: sans-serif;
+  font-size: 1rem;
 }
 
 .infobar-column {
@@ -154,7 +279,7 @@ header {
 }
 
 .infobar-column.upper {
-  border-left: 1px solid lightgrey;
+  border-left: 1px solid #D4D4D4;
 }
 
 .info-pickup-box {
@@ -164,11 +289,11 @@ header {
 }
 
 .info-pickup-box.upper {
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #D4D4D4;
 }
 
 .info-pickup-box:nth-child(3n+0) {
-  background-color: lightgrey;
+  background-color: #D4D4D4;
 }
 
 .infobar-image {
@@ -196,7 +321,9 @@ header {
 }
 
 #read-more {
-  color: blue;
+  color: #0000CD;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 /* The Courses section */
@@ -216,7 +343,7 @@ header {
 
 .course-box {
   width: 25%;
-  background-color: white;
+  background-color: #FFFFFF;
   margin: 1rem;
 }
 
@@ -232,6 +359,10 @@ header {
   height: auto;
 }
 
+#courses-textline {
+  font-size: 1rem;
+}
+
 .course-description {
   margin: 1rem 1rem 1.5rem 1rem;
 }
@@ -242,6 +373,7 @@ header {
 
 .course-description p {
   margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
 /* The 4th section with video */
@@ -276,7 +408,7 @@ header {
 
 /* Special arrangements for last section */
 .info-pickup-box.lower {
-  background-color: lightgrey;
+  background-color: #D4D4D4;
 }
 
 .quote-section.lower h3 {
@@ -288,7 +420,7 @@ footer {
   height: 80px;
   width: 100%;
   display: flex;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid #D4D4D4;
   font-size: 0.8rem;
 }
 
@@ -297,6 +429,10 @@ footer {
   display: inherit;
   justify-content: space-between;
   margin: 1rem 1.5rem 0 1.5rem;
+}
+
+footer i {
+  margin-right: 5px;
 }
 
 .terms {
