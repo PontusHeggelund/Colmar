@@ -67,7 +67,7 @@ header {
 /*Mobile screen*/
 @media only screen and (max-width: 500px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .top-menu .web_menu {
@@ -109,13 +109,24 @@ header {
   }
 
   .container .start-button {
-    width: 90%;
+    width: 100%;
     margin-bottom: 32px;
   }
 
-  .left-pic-text-column {
+  .left-container-column {
     display: none;
   }
+
+  .infobar-column.upper {
+    width: 100%;
+  }
+
+  .info-pickup-box .upper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
 }
 
 .logo {
@@ -188,7 +199,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 60%;
+  width: 100%;
   margin-right: 1.5rem;
 }
 
@@ -251,7 +262,7 @@ header {
 } */
 
 /*The second section of the page */
-.left-pic-text-column {
+.left-container-column {
   width: 60%;
 }
 
@@ -326,6 +337,33 @@ header {
   font-size: 1rem;
 }
 
+@media only screen and (max-width: 500px) {
+  .infobar-column.upper {
+    border-left: none;
+  }
+
+  .info-pickup-box:nth-child(3n+0) {
+    background-color: #FFFFFF;
+  }
+
+  .info-pickup-box {
+    flex-direction: column;
+  }
+
+  .info-pickup-box.upper {
+    border: none;
+  }
+
+  .infobar-image {
+    width: 100%;
+  }
+
+  .infobar-text {
+    width: 100%;
+    padding: 1rem 1rem 4rem 1rem;
+  }
+}
+
 /* The Courses section */
 .courses-section {
   display: flex;
@@ -396,7 +434,7 @@ header {
   margin-bottom: 2.5rem;
 }
 
-.left-pic-text-column {
+.left-container-column {
   margin: 0 1.5rem 0 1.5rem;
 }
 
