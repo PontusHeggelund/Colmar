@@ -273,6 +273,10 @@ header {
   font-size: 1rem;
 }
 
+.mobile_infobar-image {
+  display: none;
+}
+
 /* The Courses section */
 .courses-section {
   display: flex;
@@ -402,6 +406,7 @@ footer i {
     font-size: 16px;
   }
 
+/*Header*/
   .top-menu .web_menu {
     display: none;
   }
@@ -418,6 +423,7 @@ footer i {
     display: none
   }
 
+/*First section*/
   .container .frame-box {
     display: flex;
     flex-direction: column;
@@ -434,6 +440,7 @@ footer i {
     width: 100%;
     margin-left: 16px;
     margin-right: 16px;
+    margin-bottom: 32px;
   }
 
   .container .headline-box h1 {
@@ -447,6 +454,11 @@ footer i {
     text-align: center;
   }
 
+  .frame-box {
+    padding: 0;
+  }
+
+/*Second section*/
   .left-container-column.second {
     display: none;
   }
@@ -471,6 +483,7 @@ footer i {
 
   .info-pickup-box {
     flex-direction: column;
+    padding: 0 16px 0 16px;
   }
 
   .info-pickup-box.upper {
@@ -478,6 +491,11 @@ footer i {
   }
 
   .infobar-image {
+    display: none;
+  }
+
+  .mobile_infobar-image {
+    display: inline-block;
     width: 100%;
   }
 
@@ -486,6 +504,19 @@ footer i {
     padding: 1rem 1rem 4rem 1rem;
   }
 
+  .infobar-text h3 {
+    font-size: 2.2rem;
+  }
+
+  .infobar-text p {
+    font-size: 1.2rem;
+  }
+
+  #read-more {
+    font-size: 1.2rem;
+  }
+
+/*Third section*/
   .course-box {
     display: none;
   }
@@ -513,6 +544,7 @@ footer i {
     background-color: #FFFFFF;
   }
 
+/*Fourth section*/
   .quote-section.lower {
     display: none;
   }
@@ -534,13 +566,10 @@ footer i {
     margin-bottom: 32px;
   }
 
+/*Footer*/
   .foot-container {
     align-items: flex-end;
     padding-bottom: 16px;
-  }
-
-  .frame-box {
-    padding: 0;
   }
 
 }
