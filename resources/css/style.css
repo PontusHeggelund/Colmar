@@ -21,7 +21,7 @@ html {
 
 @media only screen and (max-width: 700px) {
   html {
-    font-size: 8px;
+    font-size: 9px;
   }
 }
 
@@ -128,7 +128,7 @@ header {
   display: flex;
   flex-direction: row;
   padding: 2rem 0 2rem 1.5rem;
-  width: 100%; /*added*/
+  width: 100%;
 }
 
 .picture-box {
@@ -136,7 +136,6 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  margin-right: 1.5rem;
 }
 
 .picture-box img {
@@ -151,7 +150,7 @@ header {
   width: 40%;
   font-size: 1.5rem;
   font-weight: 900;
-  margin-right: 4rem;
+  padding-right: 4rem;
 }
 
 .headline-box h1 {
@@ -169,8 +168,8 @@ header {
   color: #F8F8FF;
   font-weight: 200;
   text-decoration: none;
-  position: relative;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  /* position: relative; */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
 }
 
@@ -432,15 +431,17 @@ footer i {
 
   .picture-box {
     width: 100%;
-    justify-content: center;
-    margin-right: 0;
+  }
+
+  .picture-box img {
+    width: 100%;
   }
 
   .container .headline-box {
     width: 100%;
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 32px;
   }
 
   .container .headline-box h1 {
@@ -449,7 +450,7 @@ footer i {
   }
 
   .container .start-button {
-    width: 100%;
+    width: 90%;
     margin-bottom: 32px;
     text-align: center;
   }
@@ -465,6 +466,7 @@ footer i {
 
   .infobar-column.upper {
     width: 100%;
+    margin-top: 16px;
   }
 
   .info-pickup-box .upper {
@@ -496,6 +498,10 @@ footer i {
 
   .mobile_infobar-image {
     display: inline-block;
+    width: 100%;
+  }
+
+  .mobile_infobar-image img {
     width: 100%;
   }
 
@@ -540,7 +546,7 @@ footer i {
     margin-bottom: 32px;
   }
 
-  .container .section-box:nth-child(2n+1) {
+  .container .section-box:nth-child(3n+0) {
     background-color: #FFFFFF;
   }
 
@@ -555,6 +561,7 @@ footer i {
 
   .left-container-column {
     width: 100%;
+    margin: 0;
   }
 
   .thesis-inside-container {
